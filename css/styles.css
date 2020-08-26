@@ -1,0 +1,221 @@
+body {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+section {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 50px 80px;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 600px) {
+  section {
+    padding: 20px;
+  }
+}
+footer {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 50px 80px;
+}
+h1 {
+  font-size: 100px;
+  font-weight: 300;
+}
+h2 {
+  font-size: 90px;
+  font-weight: 300;
+}
+p {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+strong {
+  font-weight: 400;
+}
+#header {
+  background-image: url("../resources/rock.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  max-width: 1500px;
+  height: 100vh;
+  padding-right: 80px;
+}
+#header .apresentation {
+  z-index: 1;
+  color: white;
+  position: fixed;
+  top: 200px;
+  right: 50px;
+  margin: 0  auto;
+  font-weight: bold;
+  text-align: right;
+}
+#header h1 {
+  color: white;
+}
+#header h2 {
+  color: darkgray;
+  font-size: 40px;
+}
+@media screen and (max-width: 600px) {
+  #header .apresentation {
+    position: absolute;
+  }
+}
+#about {
+  z-index: 2;
+  background-image: url("../resources/triangulo-rosa.jpg");
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+#about .about-text {
+  line-height: 1.2;
+  font-weight: bold;
+  width: 50%;
+}
+#about .about-text h2 {
+  color: gray;
+  margin-bottom: 30px;
+}
+#about .about-text p {
+  color: darkgray;
+}
+@media screen and (max-width: 600px) {
+  #about {
+    height: auto;
+  }
+  #about .about-text {
+    width: 100%;
+  }
+}
+#portfolio {
+  z-index: 2;
+  background-color: black;
+  color: white;
+}
+#portfolio img {
+  width: 300px;
+}
+#portfolio h2 {
+  text-align: right;
+  color: white;
+  margin-bottom: 100px;
+}
+#portfolio p {
+  font-size: 16px;
+  width: 30%;
+}
+@media screen and (max-width: 600px) {
+  #portfolio p {
+    width: 100%;
+  }
+}
+#portfolio .portfolio-content {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+#portfolio .portfolio-content h3 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+#portfolio .portfolio-content > div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#portfolio .portfolio-content > div .carta {
+  display: flex;
+  position: relative;
+  perspective: 1000px;
+  width: 300px;
+  height: auto;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+#portfolio .portfolio-content > div .carta .frente {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: cover;
+  transition: transform 0.5s ease-out;
+  backface-visibility: hidden;
+}
+#portfolio .portfolio-content > div .carta .frente_1 {
+  background-image: url('../resources/lagarto.jpg');
+}
+#portfolio .portfolio-content > div .carta .frente_2 {
+  background-image: url('../resources/mosca.jpg');
+}
+#portfolio .portfolio-content > div .carta .frente_3 {
+  background-image: url('../resources/formiga.jpg');
+}
+#portfolio .portfolio-content > div .carta .frente_4 {
+  background-image: url('../resources/deserto.jpg');
+}
+#portfolio .portfolio-content > div .carta .frente_5 {
+  background-image: url('../resources/rocha.jpg');
+}
+#portfolio .portfolio-content > div .carta .frente_6 {
+  background-image: url('../resources/vulcao.jpg');
+}
+#portfolio .portfolio-content > div .carta .frente_7 {
+  background-image: url('../resources/mosca-2.jpg');
+}
+#portfolio .portfolio-content > div .carta .frente_8 {
+  background-image: url('../resources/rock-2.jpg');
+}
+#portfolio .portfolio-content > div .carta .verso {
+  transform: scaleX(-1);
+  transition: transform 0.5s ease-out;
+  height: auto;
+}
+#portfolio .portfolio-content > div .carta .texto {
+  z-index: 10;
+  position: absolute;
+  color: transparent;
+  top: 85%;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+#portfolio .portfolio-content > div .carta:hover .verso {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+#portfolio .portfolio-content > div .carta:hover .frente {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+#portfolio .portfolio-content > div .carta:hover .texto {
+  z-index: 3;
+  background-color: black;
+  padding: 10px;
+  color: white;
+  opacity: 1;
+  line-height: 1.2;
+  font-size: 16px;
+  border-top: 10px solid white;
+}
+footer {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+}
+footer h2 {
+  margin-bottom: 40px;
+}
+footer .email {
+  margin-bottom: 30px;
+  color: black;
+}
+footer a img {
+  width: 30px;
+}
