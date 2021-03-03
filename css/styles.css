@@ -96,27 +96,17 @@ strong {
   z-index: 2;
   background-color: black;
   color: white;
-}
-#portfolio img {
-  width: 300px;
+  overflow-y: scroll;
 }
 #portfolio h2 {
-  text-align: right;
+  text-align: left;
   color: white;
   margin-bottom: 100px;
 }
 #portfolio p {
   font-size: 16px;
-  width: 30%;
 }
 @media screen and (max-width: 600px) {
-  #portfolio p {
-    width: 100%;
-  }
-}
-#portfolio .portfolio-content {
-  margin: 0 auto;
-  max-width: 1000px;
 }
 #portfolio .portfolio-content h3 {
   font-size: 24px;
@@ -126,83 +116,28 @@ strong {
 }
 #portfolio .portfolio-content > div {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: left;
-  align-items: center;
-  margin-bottom: 50px;
+  flex-direction: row;
 }
 #portfolio .portfolio-content > div .carta {
-  display: flex;
-  position: relative;
-  perspective: 1000px;
-  width: 300px;
-  height: auto;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin: 50px 100px 50px 0;
 }
-#portfolio .portfolio-content > div .carta .frente {
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-size: cover;
-  transition: transform 0.5s ease-out;
-  backface-visibility: hidden;
+#portfolio .portfolio-content > div .carta a {
+  display: block;
+  text-decoration: none;
 }
-#portfolio .portfolio-content > div .carta .frente_1 {
-  background-image: url('../resources/lagarto.jpg');
+#portfolio .portfolio-content > div .carta a:hover .texto {
+  color: white;
 }
-#portfolio .portfolio-content > div .carta .frente_2 {
-  background-image: url('../resources/mosca.jpg');
-}
-#portfolio .portfolio-content > div .carta .frente_3 {
-  background-image: url('../resources/formiga.jpg');
-}
-#portfolio .portfolio-content > div .carta .frente_4 {
-  background-image: url('../resources/deserto.jpg');
-}
-#portfolio .portfolio-content > div .carta .frente_5 {
-  background-image: url('../resources/rocha.jpg');
-}
-#portfolio .portfolio-content > div .carta .frente_6 {
-  background-image: url('../resources/vulcao.jpg');
-}
-#portfolio .portfolio-content > div .carta .frente_7 {
-  background-image: url('../resources/mosca-2.jpg');
-}
-#portfolio .portfolio-content > div .carta .frente_8 {
-  background-image: url('../resources/rock-2.jpg');
+#portfolio .portfolio-content > div .carta:last-child {
+  padding-right: 100px;
 }
 #portfolio .portfolio-content > div .carta .verso {
-  transform: scaleX(-1);
-  transition: transform 0.5s ease-out;
-  height: auto;
+  height: 320px;
 }
 #portfolio .portfolio-content > div .carta .texto {
-  z-index: 10;
-  position: absolute;
-  color: transparent;
-  top: 85%;
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-}
-#portfolio .portfolio-content > div .carta:hover .verso {
-  transform: rotate3d(0, 1, 0, 180deg);
-}
-#portfolio .portfolio-content > div .carta:hover .frente {
-  transform: rotate3d(0, 1, 0, 180deg);
-}
-#portfolio .portfolio-content > div .carta:hover .texto {
-  z-index: 3;
-  background-color: black;
-  padding: 10px;
-  color: white;
-  opacity: 1;
-  line-height: 1.2;
-  font-size: 16px;
-  border-top: 10px solid white;
+  font-weight: bold;
+  color: black;
+  text-align: center;
 }
 footer {
   background-color: lightgrey;
