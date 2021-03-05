@@ -6,7 +6,7 @@ body {
 }
 
 section {
-	max-width: 1500px;
+	// max-width: 1500px;
 	margin: 0 auto;
 	padding: 50px 80px;
 	background-attachment: fixed;
@@ -16,7 +16,7 @@ section {
 }
 
 footer {
-	max-width: 1500px;
+	// max-width: 1500px;
 	margin: 0 auto;
 	padding: 50px 80px;	
 }
@@ -28,6 +28,16 @@ h1 {
 
 h2 {
 	font-size: 90px;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+h4 {
+	font-size: 40px;
 	font-weight: 300;
 }
 
@@ -45,9 +55,10 @@ strong {
 	background-size: cover;
 	background-position: top;
 	background-attachment: fixed;
-	max-width: 1500px;
+	// max-width: 1500px;
+	margin: 0 auto;
 	height: 100vh;
-	padding-right: 80px;
+	// padding-right: 80px;
 
 
 	.apresentation {
@@ -69,6 +80,7 @@ strong {
 		font-size: 40px;
 	}
 
+
 	@media screen and (max-width: 600px) {
 		.apresentation {
 			position: absolute;
@@ -81,7 +93,7 @@ strong {
 	background-size: contain;
 	background-position: top right;
 	background-repeat: no-repeat;
-	height: 100vh;
+	// height: 100vh;
 
 	.about-text {
 		line-height: 1.2;
@@ -109,7 +121,7 @@ strong {
 	z-index: 2;
 	background-color: black;
 	color: white;
-	overflow-y: scroll;
+	// overflow-y: scroll;
 
 	h2 {
 		text-align: left;
@@ -124,84 +136,98 @@ strong {
 		}
 	}
 	.portfolio-content {
-		// margin: 0 auto;
-		// max-width: 1000px;
+		margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 
-		h3 {
-			font-size: 24px;
-			color: white;
-			margin-bottom: 20px;
-			font-weight: 300;
-		}
+		.slick-slider {
+			width: 800px;
 
-		> div {
-			display: flex;
-			flex-direction: row;
-
-
-			.carta {
-				margin: 50px 100px 50px 0;
-
+			.slick-slide {
+				border: 1px solid white;
+				padding: 40px;
 				a {
-					display: block;
-					text-decoration: none;
+				display: flex;
+				justify-content: space-around;
+				text-decoration: none;
 
-					&:hover {
-						.texto {
-							color: white;
+					img {
+						width: 300px;
+					}
+
+					> div {
+						width: 300px;
+						color: white;
+						.descricao	{
+							font-size: 24px;
 						}
-
+						.h4 {
+							margin-bottom: 50px;
+						}
 					}
 				}
-				&:last-child {
-					padding-right: 100px;
+				&:hover {
+					border-color: darkgray;
+					a {
+						img {
+							box-shadow: 4px 2px 2px darkgray;
+						}
+						> div {
+							color:darkgray;
+						}
+					}
 				}
-
-				.frente {
-
+			}
+			@media screen and (max-width: 600px) {
+				width: 260px;
+				.slick-slide {
+					padding: 5px;
+					a {
+						flex-direction: column;
+						align-items: center;
+						img {
+							width: 250px;
+							margin-bottom: 20px;
+						}
+						> div {
+							width: 250px;
+						}
+					}
 				}
-				// código para casa decida colocr as imagens da carta
-				// .frente_1 {
-				// 	background-image: url('../resources/lagarto.jpg');
-				// }
-				// .frente_2 {
-				// 	background-image: url('../resources/mosca.jpg');
-				// }
-				// .frente_3 {
-				// 	background-image: url('../resources/formiga.jpg');
-				// }
-				// .frente_4 {
-				// 	background-image: url('../resources/deserto.jpg');
-				// }
-				// .frente_5 {
-				// 	background-image: url('../resources/rocha.jpg');
-				// }
-				// .frente_6 {
-				// 	background-image: url('../resources/vulcao.jpg');
-				// }
-				// .frente_7 {
-				// 	background-image: url('../resources/mosca-2.jpg');
-				// }
-				// .frente_8 {
-				// 	background-image: url('../resources/rock-2.jpg');
-				// }
-
-				.verso {
-					// transform: scaleX(-1);
-			  //   transition: transform 0.5s ease-out;
-			    height: 320px;
-				}
-				.texto {
-					// display: none;
-					font-weight: bold;
-    			text-align: center;
-    			color: black;
-    			text-align: center;
-
-				} 
-
 			}
 		}
+		h3 {
+			color: white;
+			margin-bottom: 20px;
+		}
+
+
+		// código para casa decida colocr as imagens da carta
+		// .frente_1 {
+		// 	background-image: url('../resources/lagarto.jpg');
+		// }
+		// .frente_2 {
+		// 	background-image: url('../resources/mosca.jpg');
+		// }
+		// .frente_3 {
+		// 	background-image: url('../resources/formiga.jpg');
+		// }
+		// .frente_4 {
+		// 	background-image: url('../resources/deserto.jpg');
+		// }
+		// .frente_5 {
+		// 	background-image: url('../resources/rocha.jpg');
+		// }
+		// .frente_6 {
+		// 	background-image: url('../resources/vulcao.jpg');
+		// }
+		// .frente_7 {
+		// 	background-image: url('../resources/mosca-2.jpg');
+		// }
+		// .frente_8 {
+		// 	background-image: url('../resources/rock-2.jpg');
+		// }
+		
 	}
 }
 

@@ -2,7 +2,6 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
 }
 section {
-  max-width: 1500px;
   margin: 0 auto;
   padding: 50px 80px;
   background-attachment: fixed;
@@ -13,7 +12,6 @@ section {
   }
 }
 footer {
-  max-width: 1500px;
   margin: 0 auto;
   padding: 50px 80px;
 }
@@ -23,6 +21,14 @@ h1 {
 }
 h2 {
   font-size: 90px;
+  font-weight: 300;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
+h4 {
+  font-size: 40px;
   font-weight: 300;
 }
 p {
@@ -38,9 +44,8 @@ strong {
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
-  max-width: 1500px;
+  margin: 0 auto;
   height: 100vh;
-  padding-right: 80px;
 }
 #header .apresentation {
   z-index: 1;
@@ -70,7 +75,6 @@ strong {
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
-  height: 100vh;
 }
 #about .about-text {
   line-height: 1.2;
@@ -96,7 +100,6 @@ strong {
   z-index: 2;
   background-color: black;
   color: white;
-  overflow-y: scroll;
 }
 #portfolio h2 {
   text-align: left;
@@ -108,36 +111,67 @@ strong {
 }
 @media screen and (max-width: 600px) {
 }
-#portfolio .portfolio-content h3 {
-  font-size: 24px;
-  color: white;
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-#portfolio .portfolio-content > div {
+#portfolio .portfolio-content {
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
 }
-#portfolio .portfolio-content > div .carta {
-  margin: 50px 100px 50px 0;
+#portfolio .portfolio-content .slick-slider {
+  width: 800px;
 }
-#portfolio .portfolio-content > div .carta a {
-  display: block;
+#portfolio .portfolio-content .slick-slider .slick-slide {
+  border: 1px solid white;
+  padding: 40px;
+}
+#portfolio .portfolio-content .slick-slider .slick-slide a {
+  display: flex;
+  justify-content: space-around;
   text-decoration: none;
 }
-#portfolio .portfolio-content > div .carta a:hover .texto {
+#portfolio .portfolio-content .slick-slider .slick-slide a img {
+  width: 300px;
+}
+#portfolio .portfolio-content .slick-slider .slick-slide a > div {
+  width: 300px;
   color: white;
 }
-#portfolio .portfolio-content > div .carta:last-child {
-  padding-right: 100px;
+#portfolio .portfolio-content .slick-slider .slick-slide a > div .descricao {
+  font-size: 24px;
 }
-#portfolio .portfolio-content > div .carta .verso {
-  height: 320px;
+#portfolio .portfolio-content .slick-slider .slick-slide a > div .h4 {
+  margin-bottom: 50px;
 }
-#portfolio .portfolio-content > div .carta .texto {
-  font-weight: bold;
-  color: black;
-  text-align: center;
+#portfolio .portfolio-content .slick-slider .slick-slide:hover {
+  border-color: darkgray;
+}
+#portfolio .portfolio-content .slick-slider .slick-slide:hover a img {
+  box-shadow: 4px 2px 2px darkgray;
+}
+#portfolio .portfolio-content .slick-slider .slick-slide:hover a > div {
+  color: darkgray;
+}
+@media screen and (max-width: 600px) {
+  #portfolio .portfolio-content .slick-slider {
+    width: 260px;
+  }
+  #portfolio .portfolio-content .slick-slider .slick-slide {
+    padding: 5px;
+  }
+  #portfolio .portfolio-content .slick-slider .slick-slide a {
+    flex-direction: column;
+    align-items: center;
+  }
+  #portfolio .portfolio-content .slick-slider .slick-slide a img {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+  #portfolio .portfolio-content .slick-slider .slick-slide a > div {
+    width: 250px;
+  }
+}
+#portfolio .portfolio-content h3 {
+  color: white;
+  margin-bottom: 20px;
 }
 footer {
   background-color: lightgrey;
