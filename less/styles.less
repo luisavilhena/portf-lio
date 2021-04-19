@@ -6,7 +6,7 @@ body {
 }
 
 section {
-	// max-width: 1500px;
+	max-width: 1500px;
 	margin: 0 auto;
 	padding: 50px 80px;
 	background-attachment: fixed;
@@ -107,6 +107,10 @@ strong {
 
 		p {
 			color: darkgray;
+		}
+		a {
+			color: white;
+			background-color: darkgray;
 		}
 	}
 	@media screen and (max-width: 600px) {
@@ -231,6 +235,56 @@ strong {
 	}
 }
 
+#portfolio-grid {
+	h2 {
+		margin-bottom: 50px;
+	}
+	> div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		// background-color: black;
+		align-items: baseline;
+		align-content: flex-start;
+		.items {
+			position: relative;
+			width: 350px;
+			margin: 5px;
+			img {
+				width: 350px;	
+			}
+			.item-hover {
+				// display: none;
+				padding: 20px;
+				// display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				color: white;
+				background-image: url('../resources/rocha-rosa-2.png');
+				background-position: right;
+				background-size: cover;
+				// background: linear-gradient(#e66465, #9198e5);
+				opacity: 0;
+				// color: transparent;
+				// background-color: transparent;
+			}
+			h4 {
+				margin-bottom: 30px;
+				font-weight: 500;
+			}
+		}
+		.items:hover {
+			.item-hover {
+				// color: white;
+				// background: linear-gradient(#e66465, #9198e5);
+				// transition: color 2s;
+				opacity: 1;
+				transition: opacity 0.4s;
+			}
+		}
+	}
+}
 footer {
 	background-color: lightgrey;
 	display: flex;

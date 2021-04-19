@@ -2,6 +2,7 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
 }
 section {
+  max-width: 1500px;
   margin: 0 auto;
   padding: 50px 80px;
   background-attachment: fixed;
@@ -88,6 +89,10 @@ strong {
 #about .about-text p {
   color: darkgray;
 }
+#about .about-text a {
+  color: white;
+  background-color: darkgray;
+}
 @media screen and (max-width: 600px) {
   #about {
     height: auto;
@@ -171,6 +176,43 @@ strong {
 #portfolio .portfolio-content h3 {
   color: white;
   margin-bottom: 20px;
+}
+#portfolio-grid h2 {
+  margin-bottom: 50px;
+}
+#portfolio-grid > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: flex-start;
+}
+#portfolio-grid > div .items {
+  position: relative;
+  width: 350px;
+  margin: 5px;
+}
+#portfolio-grid > div .items img {
+  width: 350px;
+}
+#portfolio-grid > div .items .item-hover {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  color: white;
+  background-image: url('../resources/rocha-rosa-2.png');
+  background-position: right;
+  background-size: cover;
+  opacity: 0;
+}
+#portfolio-grid > div .items h4 {
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+#portfolio-grid > div .items:hover .item-hover {
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 footer {
   background-color: lightgrey;
