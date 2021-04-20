@@ -19,7 +19,7 @@ $(document).ready(function() {
   //   $magic.css
   // })
   $(document).on("mousemove", function(e) {
-    $magic.css({"left": e.pageX - 650, "top": e.pageY - magicWHalf});
+    $magic.css({"left": e.pageX, "top": e.pageY });
   });
 });
 
