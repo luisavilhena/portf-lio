@@ -62,7 +62,7 @@ strong {
   color: white;
 }
 #header h2 {
-  color: darkgray;
+  color: white;
   font-size: 40px;
 }
 @media screen and (max-width: 600px) {
@@ -90,8 +90,8 @@ strong {
   color: darkgray;
 }
 #about .about-text a {
-  color: white;
-  background-color: darkgray;
+  color: darkgray;
+  font-weight: 500;
 }
 @media screen and (max-width: 600px) {
   #about {
@@ -179,6 +179,7 @@ strong {
 }
 #portfolio-grid h2 {
   margin-bottom: 50px;
+  color: gray;
 }
 #portfolio-grid > div {
   display: flex;
@@ -216,6 +217,7 @@ strong {
   transition: opacity 0.4s;
 }
 footer {
+  position: relative;
   background-color: lightgrey;
   display: flex;
   flex-direction: column;
@@ -229,4 +231,20 @@ footer .email {
 }
 footer a img {
   width: 30px;
+}
+.scene {
+  position: relative;
+  background-position: center;
+  cursor: none;
+}
+.scene:hover .magic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: url("../resources/rocha-rosa-2.png") no-repeat fixed;
+  background-size: cover;
+  border-radius: 50%;
+  cursor: none;
 }

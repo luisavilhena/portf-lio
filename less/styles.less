@@ -76,7 +76,7 @@ strong {
 		color: white;
 	}
 	h2 {
-		color: darkgray;
+		color: white;
 		font-size: 40px;
 	}
 
@@ -109,8 +109,8 @@ strong {
 			color: darkgray;
 		}
 		a {
-			color: white;
-			background-color: darkgray;
+			color: darkgray;
+			font-weight: 500;
 		}
 	}
 	@media screen and (max-width: 600px) {
@@ -238,6 +238,7 @@ strong {
 #portfolio-grid {
 	h2 {
 		margin-bottom: 50px;
+		color: gray;
 	}
 	> div {
 		display: flex;
@@ -287,6 +288,7 @@ strong {
 	}
 }
 footer {
+	position: relative;
 	background-color: lightgrey;
 	display: flex;
 	flex-direction: column;
@@ -303,5 +305,45 @@ footer {
 			width: 30px;
 		}
 	}
+	// &:hover {
+	// 	background-image: url('../resources/rocha-rosa-2.png');
+	// 	// border-radius: 50%;
+	// 	// position: absolute;
+ //   top: 0;
+ //   left: 0;
+ //   bottom: 0;
+ //   // mix-blend-mode: difference;
+ //   z-index: 1000;
+	// 	// width: 300px;
+	// 	// height: 300px;
+	// 	  // shape-outside: url('../resources/rocha-rosa-2.png');
+	// 	  // shape-margin: 20px;
+	// }
+}
+
+.scene {
+  position: relative;
+ 	// background-color: lightgrey;
+  // width: 100%;
+  // height: 100vh;
+  background-position: center;
+  cursor: none;
+}
+
+.scene:hover {
+	.magic {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100px;
+		height: 100px;
+		background: url("../resources/rocha-rosa-2.png") no-repeat fixed;
+		background-size: cover;
+		border-radius: 50%;
+		cursor: none;
+	}
+}
+.magic {
+
 }
 
