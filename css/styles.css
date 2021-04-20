@@ -194,6 +194,7 @@ strong {
 }
 #portfolio-grid > div .items img {
   width: 350px;
+  height: 350px;
 }
 #portfolio-grid > div .items .item-hover {
   padding: 20px;
