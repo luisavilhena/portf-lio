@@ -1,5 +1,6 @@
 body {
   font-family: 'Barlow Condensed', sans-serif;
+  overflow-x: hidden;
 }
 section {
   max-width: 1500px;
@@ -41,7 +42,7 @@ strong {
   font-weight: 400;
 }
 #header {
-  background-image: url("../resources/rock.jpg");
+  background: linear-gradient(90deg, white 50%, #f4ca37 50%);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -62,7 +63,7 @@ strong {
   color: white;
 }
 #header h2 {
-  color: white;
+  color: black;
   font-size: 40px;
 }
 @media screen and (max-width: 600px) {
@@ -70,9 +71,62 @@ strong {
     position: absolute;
   }
 }
+#line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: auto;
+}
+#line .perspective-text {
+  color: white;
+  font-family: Arial;
+  font-size: 58px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+#line .perspective-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+#line p {
+  margin: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+#line .perspective-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.667);
+}
+#line .perspective-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.337);
+}
+#line .perspective-text:hover p {
+  transform: translate(0, -50px);
+}
+#line .perspective-line:nth-child(1) {
+  left: 29px;
+}
+#line .perspective-line:nth-child(2) {
+  left: 58px;
+  background: #E6B9B7;
+}
+#line .perspective-line:nth-child(3) {
+  left: 87px;
+  background: #F4CA37;
+}
+#line .perspective-line:nth-child(4) {
+  left: 116px;
+  background: #E6B9B7;
+}
+#line .perspective-line:nth-child(5) {
+  left: 145px;
+}
 #about {
   z-index: 2;
-  background-image: url("../resources/triangulo-rosa.jpg");
+  background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
@@ -80,18 +134,21 @@ strong {
 #about .about-text {
   line-height: 1.2;
   font-weight: bold;
-  width: 50%;
+  width: 46%;
 }
 #about .about-text h2 {
-  color: gray;
+  color: white;
   margin-bottom: 30px;
 }
 #about .about-text p {
-  color: darkgray;
+  color: white;
 }
 #about .about-text a {
-  color: darkgray;
+  color: white;
   font-weight: 500;
+}
+#about .about-text a:hover {
+  color: black;
 }
 @media screen and (max-width: 600px) {
   #about {
@@ -108,7 +165,7 @@ strong {
 }
 #portfolio h2 {
   text-align: left;
-  color: white;
+  color: #E6B9B7;
   margin-bottom: 100px;
 }
 #portfolio p {
@@ -177,9 +234,29 @@ strong {
   color: white;
   margin-bottom: 20px;
 }
+.placard {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  display: flex;
+}
+.placard .placard-title {
+  display: flex;
+  color: red;
+  white-space: nowrap;
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  color: #F4CA37;
+}
+.placard h2 {
+  margin-right: 20px;
+}
+.placard h2:nth-of-type(2n) {
+  color: #E6B9B8;
+}
 #portfolio-grid h2 {
   margin-bottom: 50px;
-  color: gray;
+  color: #E6B9B7;
 }
 #portfolio-grid > div {
   display: flex;
@@ -189,13 +266,15 @@ strong {
   align-content: flex-start;
 }
 #portfolio-grid > div .items {
+  border: 3px solid black;
   position: relative;
-  width: 350px;
+  width: 30%;
+  max-height: 327px;
   margin: 5px;
 }
 #portfolio-grid > div .items img {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  max-height: 327px;
 }
 #portfolio-grid > div .items .item-hover {
   padding: 20px;
@@ -203,7 +282,7 @@ strong {
   top: 0;
   bottom: 0;
   color: white;
-  background-image: url('../resources/rocha-rosa-2.png');
+  background: #f4ca37;
   background-position: right;
   background-size: cover;
   opacity: 0;
@@ -217,17 +296,20 @@ strong {
   transition: opacity 0.4s;
 }
 footer {
+  margin-top: 50px;
+  border-top: 3px #f4ca37 solid;
   position: relative;
-  background-color: lightgrey;
+  background-color: #f4ca37;
   display: flex;
   flex-direction: column;
 }
 footer h2 {
+  color: white;
   margin-bottom: 40px;
 }
 footer .email {
   margin-bottom: 30px;
-  color: black;
+  color: white;
 }
 footer a img {
   width: 30px;
@@ -241,9 +323,9 @@ footer a img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
-  background: url("../resources/rocha-rosa-2.png") no-repeat fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #E6B9B7;
   background-size: cover;
   border-radius: 50%;
   cursor: none;

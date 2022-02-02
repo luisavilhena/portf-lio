@@ -3,6 +3,7 @@
 @cinza: #54534e;
 body {
 	font-family: 'Barlow Condensed', sans-serif;
+	overflow-x: hidden;
 }
 
 section {
@@ -51,7 +52,7 @@ strong {
 	font-weight: 400;
 }
 #header {
-	background-image: url("../resources/rock.jpg");
+ 	background: linear-gradient(90deg, white 50%,  #f4ca37 50%);
 	background-size: cover;
 	background-position: top;
 	background-attachment: fixed;
@@ -76,7 +77,7 @@ strong {
 		color: white;
 	}
 	h2 {
-		color: white;
+		color: black;
 		font-size: 40px;
 	}
 
@@ -87,9 +88,77 @@ strong {
 		}
 	}
 }
+#line {
+	// background: linear-gradient(90deg, #E6B9B7 50%, #fff 30%);
+	// border: solid 1px black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// background: #f1f1f1;
+	overflow: hidden;
+	margin-left: auto;
+	// margin-top: 250px;
+	.perspective-text {
+	  color: white;
+	  font-family: Arial;
+	  font-size: 58px;
+	  font-weight: 900;
+	  letter-spacing: -2px;
+	  text-transform: uppercase;
+	}
+
+	.perspective-line {
+	  height: 50px;
+	  overflow: hidden;
+	  position: relative;
+	}
+
+	p {
+	  margin: 0 10px;
+	  height: 50px;
+	  line-height: 50px;
+	  transition: all 0.5s ease-in-out;
+	}
+
+	.perspective-line:nth-child(odd) {
+	  transform: skew(60deg, -30deg) scaleY(0.667);
+	}
+
+	.perspective-line:nth-child(even) {
+	  transform: skew(0deg, -30deg) scaleY(1.337);
+	}
+
+	.perspective-text:hover p {
+	  transform: translate(0, -50px);
+	}
+
+	.perspective-line:nth-child(1) {
+	  left: 29px;
+	}
+
+	.perspective-line:nth-child(2) {
+	  left: 58px;
+	  background: #E6B9B7;
+	}
+
+	.perspective-line:nth-child(3) {
+	  left: 87px;
+	  background: #F4CA37;
+	}
+
+	.perspective-line:nth-child(4) {
+	  left: 116px;
+	  background: #E6B9B7;
+	}
+
+	.perspective-line:nth-child(5) {
+	  left: 145px;
+	}
+}
 #about {
 	z-index: 2;
-	background-image: url("../resources/triangulo-rosa.jpg");
+	background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
+	// background-image: url("../resources/triangulo-rosa.jpg");
 	background-size: contain;
 	background-position: top right;
 	background-repeat: no-repeat;
@@ -98,19 +167,21 @@ strong {
 	.about-text {
 		line-height: 1.2;
 		font-weight: bold;
-		width: 50%;
-
+		width: 46%;
 		h2 {
-			color: gray;
+			color: white;
 			margin-bottom: 30px;
 		}
 
 		p {
-			color: darkgray;
+			color: white;
 		}
 		a {
-			color: darkgray;
+			color: white;
 			font-weight: 500;
+		}
+		a:hover {
+			color: black;
 		}
 	}
 	@media screen and (max-width: 600px) {
@@ -129,7 +200,7 @@ strong {
 
 	h2 {
 		text-align: left;
-		color: white;
+		color: #E6B9B7;
 		margin-bottom: 100px;
 	}
 	p {
@@ -234,11 +305,31 @@ strong {
 		
 	}
 }
+.placard {
+	margin-top: 50px;
+	margin-bottom: 100px;
+  display: flex;
+  .placard-title{
+  	display: flex;
+    color: red;
+    white-space: nowrap;
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    color: #F4CA37;
+  }
+  h2{
+  	margin-right: 20px;
+  }
+  h2:nth-of-type(2n) {
+  	color: #E6B9B8;
+  }
+}
 
 #portfolio-grid {
 	h2 {
 		margin-bottom: 50px;
-		color: gray;
+		color: #E6B9B7;
 	}
 	> div {
 		display: flex;
@@ -248,12 +339,14 @@ strong {
 		align-items: baseline;
 		align-content: flex-start;
 		.items {
+			border: 3px solid black;
 			position: relative;
-			width: 350px;
+			width: 30%;
+			max-height: 327px;
 			margin: 5px;
 			img {
-				width: 350px;	
-				height: 350px;
+				width: 100%;	
+				max-height: 327px;
 			}
 			.item-hover {
 				// display: none;
@@ -263,7 +356,7 @@ strong {
 				top: 0;
 				bottom: 0;
 				color: white;
-				background-image: url('../resources/rocha-rosa-2.png');
+				background: #f4ca37;
 				background-position: right;
 				background-size: cover;
 				// background: linear-gradient(#e66465, #9198e5);
@@ -288,17 +381,20 @@ strong {
 	}
 }
 footer {
+	margin-top: 50px; 
+	border-top: 3px #f4ca37 solid;
 	position: relative;
-	background-color: lightgrey;
+	background-color: #f4ca37;
 	display: flex;
 	flex-direction: column;
 
 	h2 {
+		color: white;
 		margin-bottom: 40px;
 	}
 	.email {
 		margin-bottom: 30px;
-		color: black;
+		color: white;
 	}
 	a {
 		img {
@@ -335,9 +431,9 @@ footer {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100px;
-		height: 100px;
-		background: url("../resources/rocha-rosa-2.png") no-repeat fixed;
+		width: 50px;
+		height: 50px;
+		background-color: #E6B9B7;
 		background-size: cover;
 		border-radius: 50%;
 		cursor: none;
@@ -346,4 +442,6 @@ footer {
 .magic {
 
 }
+
+
 
