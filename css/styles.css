@@ -17,6 +17,14 @@ footer {
   margin: 0 auto;
   padding: 50px 80px;
 }
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 32px !important;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
 h1 {
   font-size: 100px;
   font-weight: 300;
@@ -124,6 +132,11 @@ strong {
 #line .perspective-line:nth-child(5) {
   left: 145px;
 }
+@media screen and (max-width: 600px) {
+  #line {
+    margin-left: -105px;
+  }
+}
 #about {
   z-index: 2;
   background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
@@ -152,6 +165,7 @@ strong {
 }
 @media screen and (max-width: 600px) {
   #about {
+    background: #f4ca37;
     height: auto;
   }
   #about .about-text {
@@ -269,12 +283,12 @@ strong {
   border: 3px solid black;
   position: relative;
   width: 30%;
-  max-height: 327px;
+  max-height: 255px;
   margin: 5px;
 }
 #portfolio-grid > div .items img {
   width: 100%;
-  max-height: 327px;
+  max-height: 255px;
 }
 #portfolio-grid > div .items .item-hover {
   padding: 20px;
@@ -294,6 +308,16 @@ strong {
 #portfolio-grid > div .items:hover .item-hover {
   opacity: 1;
   transition: opacity 0.4s;
+}
+@media screen and (max-width: 600px) {
+  #portfolio-grid > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #portfolio-grid > div .items {
+    width: 90%;
+  }
 }
 footer {
   margin-top: 50px;
