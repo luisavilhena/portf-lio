@@ -84,6 +84,7 @@ strong {
   justify-content: center;
   overflow: hidden;
   margin-left: auto;
+  padding-right: 250px;
 }
 #line .perspective-text {
   color: white;
@@ -134,6 +135,7 @@ strong {
 @media screen and (max-width: 600px) {
   #line {
     margin-left: -105px;
+    padding-right: 0px;
   }
 }
 #about {
