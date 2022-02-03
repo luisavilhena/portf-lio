@@ -3,7 +3,6 @@ body {
   overflow-x: hidden;
 }
 section {
-  max-width: 1500px;
   margin: 0 auto;
   padding: 50px 80px;
   background-attachment: fixed;
