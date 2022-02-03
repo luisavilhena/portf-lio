@@ -268,21 +268,6 @@ strong {
 				}
 			}
 			@media screen and (max-width: 600px) {
-				width: 260px;
-				.slick-slide {
-					padding: 5px;
-					a {
-						flex-direction: column;
-						align-items: center;
-						img {
-							width: 250px;
-							margin-bottom: 20px;
-						}
-						> div {
-							width: 250px;
-						}
-					}
-				}
 			}
 		}
 		h3 {
@@ -318,6 +303,46 @@ strong {
 		// }
 		
 	}
+}
+.items:first-of-type .verso {
+	background-image: url('../resources/viri.png');
+}
+.items:nth-of-type(2) .verso{
+	background-image: url('../resources/fr.png');
+}
+.items:nth-of-type(3) .verso{
+	background-image: url('../resources/oed-3.png');
+}
+.items:nth-of-type(4) .verso{
+	background-image: url('../resources/madu.png');
+}
+.items:nth-of-type(5) .verso{
+	background-image: url('../resources/yoyo-1.png');
+}
+.items:nth-of-type(6) .verso{
+	background-image: url('../resources/cc.png');
+}
+.items:nth-of-type(7) .verso{
+	background-image: url('../resources/azmina.png');
+}
+.items:nth-of-type(8) .verso{
+	background-image: url('../resources/como-anda-3.png');
+}
+.items:nth-of-type(9) .verso{
+	background-image: url('../resources/portfolio-3.png');
+}
+.items:nth-of-type(10) .verso{
+	background-image: url('../resources/calcu.png');
+}
+.items:nth-of-type(11) .verso{
+	background-image: url('../resources/p5.png');
+}
+
+
+.verso {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .placard {
 	margin-top: 50px;
@@ -355,12 +380,12 @@ strong {
 		.items {
 			border: 3px solid black;
 			position: relative;
-			width: 30%;
-			max-height: 255px;
+			// width: 30%;
+			// max-height: 255px;
 			margin: 5px;
-			img {
-				width: 100%;	
-				max-height: 255px;
+			.verso {
+				width: 300px;	
+				height: 300px;
 			}
 			.item-hover {
 				// display: none;
@@ -398,8 +423,9 @@ strong {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			align-content: center;
 			.items {
-				width: 90%;
+				width: auto;
 			}
 		}
 	}
