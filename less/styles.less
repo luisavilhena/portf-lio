@@ -9,7 +9,7 @@ body {
 section {
 	// max-width: 1500px;
 	margin: 0 auto;
-	padding: 50px 80px;
+	padding: 100px 80px;
 	background-attachment: fixed;
 	@media screen and (max-width: 600px) {
 		padding: 20px;
@@ -171,6 +171,7 @@ strong {
 	}
 }
 #about {
+	display: flex;
 	z-index: 2;
 	background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
 	// background-image: url("../resources/triangulo-rosa.jpg");
@@ -182,7 +183,7 @@ strong {
 	.about-text {
 		line-height: 1.2;
 		font-weight: bold;
-		width: 46%;
+		width: 40%;
 		h2 {
 			color: white;
 			margin-bottom: 30px;
@@ -199,6 +200,38 @@ strong {
 			color: black;
 		}
 	}
+	.foto {
+		background-image: url('../resources/luisa-foto.png');
+		background-position: center center;
+		background-size: cover;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		margin-left: 3%;
+	}
+	.servicos {
+		width: 35%;
+		margin-left: 7%;
+		h2 {
+			margin-bottom: 30px;
+			// color:#E6B9B8;
+		}
+		ul {
+			li {
+				margin-bottom: 15px;
+				font-size: 21px;
+				list-style: none;
+				// color: #E6B9B8;
+			}
+			li::before {
+				content: "•"; 
+				color: #E6B9B8;
+				display: inline-block;
+				width: 1em;
+		  	margin-left: -1em;
+		  }
+		}
+	}
 	@media screen and (max-width: 600px) {
 		background: #f4ca37;
 		height: auto;
@@ -208,104 +241,6 @@ strong {
 	}
 }
 
-#portfolio {
-	z-index: 2;
-	background-color: black;
-	color: white;
-	// overflow-y: scroll;
-
-	h2 {
-		text-align: left;
-		color: #E6B9B7;
-		margin-bottom: 100px;
-	}
-	p {
-		font-size: 16px;
-		// width: 30%;
-		@media screen and (max-width: 600px) {
-			// width: 100%;
-		}
-	}
-	.portfolio-content {
-		margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-
-		.slick-slider {
-			width: 800px;
-
-			.slick-slide {
-				// border: 1px solid white;
-				padding: 40px;
-				a {
-				display: flex;
-				justify-content: space-around;
-				text-decoration: none;
-
-					img {
-						width: 300px;
-					}
-
-					> div {
-						width: 300px;
-						color: white;
-						.descricao	{
-							font-size: 24px;
-						}
-						.h4 {
-							margin-bottom: 50px;
-						}
-					}
-				}
-				&:hover {
-					border-color: darkgray;
-					a {
-						img {
-							box-shadow: 4px 2px 2px darkgray;
-						}
-						> div {
-							color:darkgray;
-						}
-					}
-				}
-			}
-			@media screen and (max-width: 600px) {
-			}
-		}
-		h3 {
-			color: white;
-			margin-bottom: 20px;
-		}
-
-
-		// código para casa decida colocr as imagens da carta
-		// .frente_1 {
-		// 	background-image: url('../resources/lagarto.jpg');
-		// }
-		// .frente_2 {
-		// 	background-image: url('../resources/mosca.jpg');
-		// }
-		// .frente_3 {
-		// 	background-image: url('../resources/formiga.jpg');
-		// }
-		// .frente_4 {
-		// 	background-image: url('../resources/deserto.jpg');
-		// }
-		// .frente_5 {
-		// 	background-image: url('../resources/rocha.jpg');
-		// }
-		// .frente_6 {
-		// 	background-image: url('../resources/vulcao.jpg');
-		// }
-		// .frente_7 {
-		// 	background-image: url('../resources/mosca-2.jpg');
-		// }
-		// .frente_8 {
-		// 	background-image: url('../resources/rock-2.jpg');
-		// }
-		
-	}
-}
 .items:first-of-type .verso {
 	background-image: url('../resources/viri.png');
 }
@@ -347,7 +282,7 @@ strong {
 	background-repeat: no-repeat;
 }
 .placard {
-	margin-top: 50px;
+	margin-top: 100px;
 	margin-bottom: 100px;
   display: flex;
   .placard-title{
@@ -361,9 +296,19 @@ strong {
   }
   h2{
   	margin-right: 20px;
+  	margin-left: 20px;
   }
   h2:nth-of-type(2n) {
   	color: #E6B9B8;
+  }
+  .placard-title:nth-of-type(2) {
+  	h2:nth-of-type(1n) {
+  		color: #E6B9B8;
+  	}
+  	h2:nth-of-type(2n) {
+  		color: #F4CA37;
+  	}
+
   }
 }
 
@@ -380,14 +325,24 @@ strong {
 		align-items: baseline;
 		align-content: flex-start;
 		.items {
-			border: 3px solid black;
+			// border: 3px solid black;
 			position: relative;
 			// width: 30%;
 			// max-height: 255px;
 			margin: 5px;
+			// &:after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: 0;
+			// 	bottom: 0;
+			// 	right: 0;
+			// 	left: 0;
+			// 	background-color: rgba(0,0,0,0.4);
+			// }
 			.verso {
-				width: 300px;	
-				height: 300px;
+				width: 400px;	
+				height: 400px;
+				filter: grayscale(100%);
 			}
 			.item-hover {
 				// display: none;
@@ -395,6 +350,8 @@ strong {
 				// display: block;
 				position: absolute;
 				top: 0;
+				right: 0;
+				left: 0;
 				bottom: 0;
 				color: white;
 				background: #f4ca37;
@@ -447,6 +404,9 @@ footer {
 	.email {
 		margin-bottom: 30px;
 		color: white;
+	}
+	svg {
+		width: 30px;
 	}
 	a {
 		img {

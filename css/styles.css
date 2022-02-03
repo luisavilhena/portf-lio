@@ -4,7 +4,7 @@ body {
 }
 section {
   margin: 0 auto;
-  padding: 50px 80px;
+  padding: 100px 80px;
   background-attachment: fixed;
 }
 @media screen and (max-width: 600px) {
@@ -139,6 +139,7 @@ strong {
   }
 }
 #about {
+  display: flex;
   z-index: 2;
   background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
   background-size: contain;
@@ -148,7 +149,7 @@ strong {
 #about .about-text {
   line-height: 1.2;
   font-weight: bold;
-  width: 46%;
+  width: 40%;
 }
 #about .about-text h2 {
   color: white;
@@ -164,6 +165,34 @@ strong {
 #about .about-text a:hover {
   color: black;
 }
+#about .foto {
+  background-image: url('../resources/luisa-foto.png');
+  background-position: center center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: 3%;
+}
+#about .servicos {
+  width: 35%;
+  margin-left: 7%;
+}
+#about .servicos h2 {
+  margin-bottom: 30px;
+}
+#about .servicos ul li {
+  margin-bottom: 15px;
+  font-size: 21px;
+  list-style: none;
+}
+#about .servicos ul li::before {
+  content: "•";
+  color: #E6B9B8;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
 @media screen and (max-width: 600px) {
   #about {
     background: #f4ca37;
@@ -172,63 +201,6 @@ strong {
   #about .about-text {
     width: 100%;
   }
-}
-#portfolio {
-  z-index: 2;
-  background-color: black;
-  color: white;
-}
-#portfolio h2 {
-  text-align: left;
-  color: #E6B9B7;
-  margin-bottom: 100px;
-}
-#portfolio p {
-  font-size: 16px;
-}
-@media screen and (max-width: 600px) {
-}
-#portfolio .portfolio-content {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-}
-#portfolio .portfolio-content .slick-slider {
-  width: 800px;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide {
-  padding: 40px;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide a {
-  display: flex;
-  justify-content: space-around;
-  text-decoration: none;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide a img {
-  width: 300px;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide a > div {
-  width: 300px;
-  color: white;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide a > div .descricao {
-  font-size: 24px;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide a > div .h4 {
-  margin-bottom: 50px;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide:hover {
-  border-color: darkgray;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide:hover a img {
-  box-shadow: 4px 2px 2px darkgray;
-}
-#portfolio .portfolio-content .slick-slider .slick-slide:hover a > div {
-  color: darkgray;
-}
-#portfolio .portfolio-content h3 {
-  color: white;
-  margin-bottom: 20px;
 }
 .items:first-of-type .verso {
   background-image: url('../resources/viri.png');
@@ -269,7 +241,7 @@ strong {
   background-repeat: no-repeat;
 }
 .placard {
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
 }
@@ -284,9 +256,16 @@ strong {
 }
 .placard h2 {
   margin-right: 20px;
+  margin-left: 20px;
 }
 .placard h2:nth-of-type(2n) {
   color: #E6B9B8;
+}
+.placard .placard-title:nth-of-type(2) h2:nth-of-type(1n) {
+  color: #E6B9B8;
+}
+.placard .placard-title:nth-of-type(2) h2:nth-of-type(2n) {
+  color: #F4CA37;
 }
 #portfolio-grid h2 {
   margin-bottom: 50px;
@@ -300,18 +279,20 @@ strong {
   align-content: flex-start;
 }
 #portfolio-grid > div .items {
-  border: 3px solid black;
   position: relative;
   margin: 5px;
 }
 #portfolio-grid > div .items .verso {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
+  filter: grayscale(100%);
 }
 #portfolio-grid > div .items .item-hover {
   padding: 20px;
   position: absolute;
   top: 0;
+  right: 0;
+  left: 0;
   bottom: 0;
   color: white;
   background: #f4ca37;
@@ -353,6 +334,9 @@ footer h2 {
 footer .email {
   margin-bottom: 30px;
   color: white;
+}
+footer svg {
+  width: 30px;
 }
 footer a img {
   width: 30px;
