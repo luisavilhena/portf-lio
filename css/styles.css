@@ -141,7 +141,7 @@ strong {
 #about {
   display: flex;
   z-index: 2;
-  background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
+  background: linear-gradient(90deg, #f4ca37 50.4%, #fff 30%);
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
