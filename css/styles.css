@@ -141,7 +141,7 @@ strong {
 #about {
   display: flex;
   z-index: 2;
-  background: linear-gradient(90deg, #f4ca37 50.4%, #fff 30%);
+  background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
@@ -211,36 +211,39 @@ strong {
   }
 }
 .items:first-of-type .verso {
-  background-image: url('../resources/viri.png');
+  background-image: url('../resources/raw.1.png');
 }
 .items:nth-of-type(2) .verso {
-  background-image: url('../resources/fr.png');
+  background-image: url('../resources/viri.png');
 }
 .items:nth-of-type(3) .verso {
-  background-image: url('../resources/oed-3.png');
+  background-image: url('../resources/fr.png');
 }
 .items:nth-of-type(4) .verso {
-  background-image: url('../resources/madu.png');
+  background-image: url('../resources/oed-3.png');
 }
 .items:nth-of-type(5) .verso {
-  background-image: url('../resources/yoyo-1.png');
+  background-image: url('../resources/madu.png');
 }
 .items:nth-of-type(6) .verso {
-  background-image: url('../resources/cc.png');
+  background-image: url('../resources/yoyo-1.png');
 }
 .items:nth-of-type(7) .verso {
-  background-image: url('../resources/azmina.png');
+  background-image: url('../resources/cc.png');
 }
 .items:nth-of-type(8) .verso {
-  background-image: url('../resources/como-anda-3.png');
+  background-image: url('../resources/azmina.png');
 }
 .items:nth-of-type(9) .verso {
-  background-image: url('../resources/portfolio-3.png');
+  background-image: url('../resources/como-anda-3.png');
 }
 .items:nth-of-type(10) .verso {
-  background-image: url('../resources/calcu.png');
+  background-image: url('../resources/portfolio-3.png');
 }
 .items:nth-of-type(11) .verso {
+  background-image: url('../resources/calcu.png');
+}
+.items:nth-of-type(12) .verso {
   background-image: url('../resources/p5.png');
 }
 .verso {
