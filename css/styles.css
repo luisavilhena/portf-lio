@@ -166,7 +166,6 @@ strong {
   color: black;
 }
 #about .foto {
-  background-image: url('../resources/luisa-foto.png');
   background-position: center center;
   background-size: cover;
   width: 200px;
