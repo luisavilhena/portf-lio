@@ -1,6 +1,7 @@
-@amarelo: #ffde59;
-@amarelo-escuro: #d6b42a;
+@amarelo: #173317;
+@amarelo-escuro: #173317;
 @cinza: #54534e;
+@purple: #eb84f7;
 body {
 	font-family: 'Barlow Condensed', sans-serif;
 	overflow-x: hidden;
@@ -12,7 +13,7 @@ section {
 	padding: 100px 80px;
 	background-attachment: fixed;
 	@media screen and (max-width: 600px) {
-		padding: 40px;
+		padding: 40px 15px;
 	}
 }
 
@@ -20,6 +21,31 @@ footer {
 	// max-width: 1500px;
 	margin: 0 auto;
 	padding: 50px 80px;	
+}
+
+#stripes {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.stripes {
+	display: flex;
+	flex-direction: row;
+}
+.stripe {
+	width: 10px;
+	height: 100vh;
+}
+.yellow-stripe {
+	background-color: @amarelo;
+}
+.white-stripe {
+	background-color: white;
 }
 
 @media screen and (max-width: 600px) {
@@ -60,7 +86,7 @@ strong {
 	font-weight: 400;
 }
 #header {
- 	background: linear-gradient(90deg, white 50%,  #f4ca37 50%);
+ 	background: linear-gradient(90deg, white 50%,  @amarelo 50%);
 	background-size: cover;
 	background-position: top;
 	background-attachment: fixed;
@@ -82,7 +108,7 @@ strong {
 	}
 
 	h1 {
-		color: white;
+		color: #eb84f7;
 	}
 	h2 {
 		color: black;
@@ -152,7 +178,7 @@ strong {
 
 	.perspective-line:nth-child(3) {
 	  left: 87px;
-	  background: #F4CA37;
+	  background: @purple;
 	}
 
 	.perspective-line:nth-child(4) {
@@ -172,8 +198,9 @@ strong {
 }
 #about {
 	display: flex;
+	justify-content: space-between;
 	z-index: 2;
-	background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
+	background: linear-gradient(90deg, @amarelo 50%, #fff 30%);
 	// background-image: url("../resources/triangulo-rosa.jpg");
 	background-size: contain;
 	background-position: top right;
@@ -185,7 +212,7 @@ strong {
 		font-weight: bold;
 		width: 40%;
 		h2 {
-			color: white;
+			color: @purple;
 			margin-bottom: 30px;
 		}
 
@@ -197,7 +224,7 @@ strong {
 			font-weight: 500;
 		}
 		a:hover {
-			color: black;
+			color: @purple;
 		}
 	}
 	.foto {
@@ -214,6 +241,7 @@ strong {
 		margin-left: 7%;
 		h2 {
 			margin-bottom: 30px;
+			color: @amarelo;
 			// color:#E6B9B8;
 		}
 		ul {
@@ -228,25 +256,40 @@ strong {
 				color: #E6B9B8;
 				display: inline-block;
 				width: 1em;
-		  	margin-left: -1em;
+		  		margin-left: -1em;
 		  }
 		}
 	}
 	@media screen and (max-width: 600px) {
-		background: #f4ca37;
+		background: @amarelo;
 		height: auto;
 		flex-direction: column;
 		align-items: center;
 	 	.about-text {
 	    width: 100%;
-  	}
-  	.servicos {
-  		width: 100%;
-  	}
-  	.foto {
-  		margin: 20px 0;
-  	}
+  	    }
+		.servicos {
+			width: 100%;
+			h2 {
+				margin-top: 50px;
+				color: @purple;
+			}
+		}
+		.foto {
+			margin: 20px 0;
+		}
 	}
+}
+.items {
+	width: 48%;
+	transition: top 1s;
+	margin-top: 50px;
+	margin-bottom: 110px;
+	transition: margin-top 1s;
+}
+.items.active {
+	margin-top: -100px;
+	transition: margin-top 1s;
 }
 .items:first-of-type .verso {
 	background-image: url('../resources/raw.1.png');
@@ -324,6 +367,7 @@ strong {
 }
 
 #portfolio-grid {
+	padding: 110px 80px 0 80px;
 	h2 {
 		margin-bottom: 50px;
 		color: #E6B9B7;
@@ -336,11 +380,13 @@ strong {
 		align-items: baseline;
 		align-content: flex-start;
 		.items {
+			background-color: @amarelo;
 			// border: 3px solid black;
 			position: relative;
 			// width: 30%;
 			// max-height: 255px;
-			margin: 5px;
+			margin-right: 5px;
+			margin-left: 5px;
 			// &:after {
 			// 	content: '';
 			// 	position: absolute;
@@ -351,9 +397,8 @@ strong {
 			// 	background-color: rgba(0,0,0,0.4);
 			// }
 			.verso {
-				width: 400px;	
+				width: 100%;	
 				height: 400px;
-				filter: grayscale(100%);
 			}
 			.item-hover {
 				// display: none;
@@ -365,7 +410,7 @@ strong {
 				left: 0;
 				bottom: 0;
 				color: white;
-				background: #f4ca37;
+				background: @amarelo;
 				background-position: right;
 				background-size: cover;
 				// background: linear-gradient(#e66465, #9198e5);
@@ -395,7 +440,7 @@ strong {
 			align-items: center;
 			align-content: center;
 			.items {
-				width: auto;
+				width: 100%;
 			}
 			.verso {
 				width: 350px;
@@ -406,9 +451,8 @@ strong {
 }
 footer {
 	margin-top: 50px; 
-	border-top: 3px #f4ca37 solid;
 	position: relative;
-	background-color: #f4ca37;
+	background-color: @amarelo;
 	display: flex;
 	flex-direction: column;
 
@@ -465,9 +509,6 @@ footer {
 		border-radius: 50%;
 		cursor: none;
 	}
-}
-.magic {
-
 }
 
 
