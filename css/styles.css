@@ -9,12 +9,36 @@ section {
 }
 @media screen and (max-width: 600px) {
   section {
-    padding: 40px;
+    padding: 40px 15px;
   }
 }
 footer {
   margin: 0 auto;
   padding: 50px 80px;
+}
+#stripes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.stripes {
+  display: flex;
+  flex-direction: row;
+}
+.stripe {
+  width: 10px;
+  height: 100vh;
+}
+.yellow-stripe {
+  background-color: #173317;
+}
+.white-stripe {
+  background-color: white;
 }
 @media screen and (max-width: 600px) {
   h1 {
@@ -49,7 +73,7 @@ strong {
   font-weight: 400;
 }
 #header {
-  background: linear-gradient(90deg, white 50%, #f4ca37 50%);
+  background: linear-gradient(90deg, white 50%, #173317 50%);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -67,7 +91,7 @@ strong {
   text-align: right;
 }
 #header h1 {
-  color: white;
+  color: #eb84f7;
 }
 #header h2 {
   color: black;
@@ -123,7 +147,7 @@ strong {
 }
 #line .perspective-line:nth-child(3) {
   left: 87px;
-  background: #F4CA37;
+  background: #eb84f7;
 }
 #line .perspective-line:nth-child(4) {
   left: 116px;
@@ -140,8 +164,9 @@ strong {
 }
 #about {
   display: flex;
+  justify-content: space-between;
   z-index: 2;
-  background: linear-gradient(90deg, #f4ca37 50%, #fff 30%);
+  background: linear-gradient(90deg, #173317 50%, #fff 30%);
   background-size: contain;
   background-position: top right;
   background-repeat: no-repeat;
@@ -152,7 +177,7 @@ strong {
   width: 40%;
 }
 #about .about-text h2 {
-  color: white;
+  color: #eb84f7;
   margin-bottom: 30px;
 }
 #about .about-text p {
@@ -163,9 +188,10 @@ strong {
   font-weight: 500;
 }
 #about .about-text a:hover {
-  color: black;
+  color: #eb84f7;
 }
 #about .foto {
+  background-image: url('../resources/luisa-foto.png');
   background-position: center center;
   background-size: cover;
   width: 200px;
@@ -179,6 +205,7 @@ strong {
 }
 #about .servicos h2 {
   margin-bottom: 30px;
+  color: #173317;
 }
 #about .servicos ul li {
   margin-bottom: 15px;
@@ -194,7 +221,7 @@ strong {
 }
 @media screen and (max-width: 600px) {
   #about {
-    background: #f4ca37;
+    background: #173317;
     height: auto;
     flex-direction: column;
     align-items: center;
@@ -205,9 +232,24 @@ strong {
   #about .servicos {
     width: 100%;
   }
+  #about .servicos h2 {
+    margin-top: 50px;
+    color: #eb84f7;
+  }
   #about .foto {
     margin: 20px 0;
   }
+}
+.items {
+  width: 48%;
+  transition: top 1s;
+  margin-top: 50px;
+  margin-bottom: 110px;
+  transition: margin-top 1s;
+}
+.items.active {
+  margin-top: -100px;
+  transition: margin-top 1s;
 }
 .items:first-of-type .verso {
   background-image: url('../resources/raw.1.png');
@@ -277,6 +319,9 @@ strong {
 .placard .placard-title:nth-of-type(2) h2:nth-of-type(2n) {
   color: #F4CA37;
 }
+#portfolio-grid {
+  padding: 110px 80px 0 80px;
+}
 #portfolio-grid h2 {
   margin-bottom: 50px;
   color: #E6B9B7;
@@ -289,13 +334,14 @@ strong {
   align-content: flex-start;
 }
 #portfolio-grid > div .items {
+  background-color: #173317;
   position: relative;
-  margin: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 #portfolio-grid > div .items .verso {
-  width: 400px;
+  width: 100%;
   height: 400px;
-  filter: grayscale(100%);
 }
 #portfolio-grid > div .items .item-hover {
   padding: 20px;
@@ -305,7 +351,7 @@ strong {
   left: 0;
   bottom: 0;
   color: white;
-  background: #f4ca37;
+  background: #173317;
   background-position: right;
   background-size: cover;
   opacity: 0;
@@ -326,7 +372,7 @@ strong {
     align-content: center;
   }
   #portfolio-grid > div .items {
-    width: auto;
+    width: 100%;
   }
   #portfolio-grid > div .verso {
     width: 350px;
@@ -335,9 +381,8 @@ strong {
 }
 footer {
   margin-top: 50px;
-  border-top: 3px #f4ca37 solid;
   position: relative;
-  background-color: #f4ca37;
+  background-color: #173317;
   display: flex;
   flex-direction: column;
 }
