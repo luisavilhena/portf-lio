@@ -78,11 +78,13 @@ for(i=0; i<=numberColumns; i++){
 }
 elStripes[0].cloneNode
 
-var tl = gsap.timeline();
+var tl = gsap.timeline({});
 let trigger = gsap.utils.toArray('.stripes');
 let items = gsap.utils.toArray('.items');
+gsap.from(".white-stripe", {backgroundColor: 'yellow', duration: 8})
+gsap.from(".yellow-stripe", {backgroundColor: 'blue', duration: 8})
 trigger.forEach((element) => {
-  tl.to(element, {display:"none", duration: 0.05, ease: Power4.easeIn})
+     tl.to(element, {display:"none", duration: 0.05, ease: Power4.easeIn})
 })
  tl.from("#apresentation", {x:-500, duration: 0.4, ease: Power4.easeIn})
 
