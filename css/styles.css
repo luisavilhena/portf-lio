@@ -365,6 +365,9 @@ strong {
   transition: opacity 0.4s;
 }
 @media screen and (max-width: 600px) {
+  #portfolio-grid {
+    padding: 110px 5px;
+  }
   #portfolio-grid > div {
     flex-direction: column;
     justify-content: center;
