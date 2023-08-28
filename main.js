@@ -1,4 +1,10 @@
 var apresentation = document.getElementById("apresentation");
+var header = document.getElementById("header")
+var altura= header.getBoundingClientRect().bottom
+console.log(altura)
+if(altura<366){
+  apresentation.style.display = "none";
+}
 
 
 window.onscroll = function() {
@@ -8,6 +14,11 @@ window.onscroll = function() {
 		apresentation.style.display = "block";
 	}
 }
+
+
+// console.log(portfolio.getBoundingClientRect(), sizeHeight)
+
+
 
 $(document).ready(function() {
   var $magic = $(".magic"),
@@ -115,7 +126,68 @@ console.log(sizeHeight)
 // items.forEach((element) => {
 //   tl.from(element, {y:200, duration: 1, ease: Power4.easeIn})
 // })
+//AI
 
+const API_KEY = "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";
 
+const formPerguntaChat = document.getElementById("ai")
+formPerguntaChat.addEventListener("submit", async (e)=> {
+  console.log(formPerguntaChat)
+  e.preventDefault();
+  let pergunta = document.getElementById("pergunta").value;
+  console.log(pergunta)
 
+  await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + API_KEY,
+    },
+      //enviar os dados para a requisição
+    body: JSON.stringify({
+        model: "gpt-3.5-turbo",
+        messages: [
+          {
+            "role": "system",
+            "content": "You will be provided with a description of a mood, and your task is to generate the CSS code for a color that matches it. Write your output in json with a single key called \"css_code\".",
+          },
+          {
+            "role": "user",
+            "content":pergunta,
+          }],
+        max_tokens: 1024,
+        temperature: 0,
+    }),
+  })
+  .then((resposta)=> resposta.json())
+  .then((dados)=> {
+    console.log(dados);
+    let result = dados.choices[0].message.content
+    console.log(result)
+    console.log(result.length)
+    if(result.includes('Please provide a mood description') || 
+    result.includes('"/* CSS code for matching color */')
+    ){
+      document.getElementById("erro").innerHTML = "Resultado não encontrado, digite outro, por favor?"
+    } else {
+      document.getElementById("erro").innerHTML = ""
 
+      let indexResult = result.indexOf('#')
+      console.log(indexResult)
+      let newResult= result.substr(indexResult + 1)
+      let correctResult = newResult.replace('"\n}', '')
+      let othercorrectResult = correctResult.replace('; }', '')
+      let othercorrectResult2 = othercorrectResult.replace(';', '')
+      console.log(newResult.length, newResult, correctResult)
+      document.getElementById("color-mood").style.backgroundColor= "#"+ othercorrectResult2;
+      document.getElementById("color-mood").classList.add("transition")
+    }
+
+  })
+  .catch((erro) => {
+      document.getElementById("erro").innerHTML = "Resultado não encontrado, digite outro, por favor?"
+
+  });
+  
+})
