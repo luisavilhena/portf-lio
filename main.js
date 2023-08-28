@@ -128,7 +128,7 @@ console.log(sizeHeight)
 // })
 //AI
 
-const API_KEY = "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";
+const API_KEY = "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";
 
 const formPerguntaChat = document.getElementById("ai")
 formPerguntaChat.addEventListener("submit", async (e)=> {
