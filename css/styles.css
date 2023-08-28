@@ -463,8 +463,11 @@ form {
   color: #173317;
   transition: all 0.2s;
 }
+
 #erro {
-  color: #eb84f7;
-  font-size: 18px;
-  margin: 10px 0;
+	color: black;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 10px 0;
+}
 }
